@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Sitecraft</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="36" height="36" viewBox="0 0 30 30" fill="none">
+                        <rect x="3" y="4" width="18" height="14" rx="3" fill="white"/>
+                        <rect x="5" y="6" width="14" height="2.5" rx="1" fill="#1560BD"/>
+                        <rect x="5" y="10" width="10" height="2" rx="1" fill="#2E86DE" opacity="0.85"/>
+                        <circle cx="22" cy="22" r="5" fill="white"/>
+                        <path d="M20 22L21.5 23.5L24.5 20.5" stroke="#1560BD" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="logo-text">Site<span class="blue">craft</span></div>
+            </div>
+            <a href="index.html" class="back-btn">← Back to Home</a>
+        </div>
+    </nav>
+
+    <section class="appointment-hero">
+        <div class="container">
+            <h1>Book Your Free 30-Minute Consultation</h1>
+            <p>We work with businesses all over India. Let's create a premium website that grows your business.</p>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <div class="container">
+            <form id="bookingForm" class="booking-form">
+                
+                <input type="hidden" name="access_key" value="d0b391a5-c333-4eea-bf38-9ed379cb533a">
+                <input type="hidden" name="subject" value="New Appointment Booking - Sitecraft">
+                <input type="hidden" name="from_name" value="Sitecraft Booking">
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Full Name <span class="required">*</span></label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number <span class="required">*</span></label>
+                        <input type="tel" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address <span class="required">*</span></label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Date <span class="required">*</span></label>
+                        <input type="date" id="date" name="preferred_date" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Time <span class="required">*</span></label>
+                    <div class="time-slots" id="timeSlots"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>Business Type <span class="required">*</span></label>
+                    <select name="service_type" required>
+                        <option value="">Select Your Business</option>
+                        <option value="Dental Clinic">Dental Clinic</option>
+                        <option value="Cafe / Restaurant">Cafe / Restaurant</option>
+                        <option value="Gym / Fitness">Gym / Fitness Center</option>
+                        <option value="Other">Other Business</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Tell us about your project / requirements</label>
+                    <textarea name="message" rows="6" placeholder="Example: I need a modern website with online appointment booking for my dental clinic in Pune..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> Confirm My Appointment Request
+                </button>
+
+                <p class="form-note">You will receive a confirmation. We will call you within a few hours.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Link to separate JS file -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #1e2937; }
+
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+.navbar {
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.navbar .container { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; }
+
+.logo { display: flex; align-items: center; gap: 14px; }
+.logo-icon { background: linear-gradient(135deg, #1560BD, #2E86DE); width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; }
+.logo-text { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; }
+.blue { color: #1560BD; }
+
+.nav-links a { margin: 0 20px; text-decoration: none; color: #334155; font-weight: 500; }
+.phone-btn { background: #1560BD; color: white; padding: 12px 28px; border-radius: 9999px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero .container { text-align: center; }
+
+.hero-title { font-size: 3.8rem; line-height: 1.1; font-weight: 700; margin-bottom: 20px; }
+.highlight { color: #60a5fa; }
+
+.hero-subtitle { font-size: 1.4rem; margin-bottom: 40px; opacity: 0.9; }
+
+.btn-primary {
+    background: white;
+    color: #1560BD;
+    padding: 18px 40px;
+    border-radius: 9999px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+    padding: 18px 40px;
+    border-radius: 9999px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.big { padding: 22px 50px; font-size: 1.3rem; }
+
+/* Sections */
+.section { padding: 100px 0; }
+.section-title { text-align: center; font-size: 3rem; margin-bottom: 60px; font-weight: 700; }
+.bg-light { background: #f8fafc; }
+
+.services-grid, .portfolio-grid, .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.service-card, .project-card, .review-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.service-icon { font-size: 4.5rem; margin-bottom: 20px; }
+
+/* Appointment Page */
+.appointment-hero {
+    background: linear-gradient(135deg, #1560BD, #2E86DE);
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.booking-form {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 60px;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.time-slots { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 12px; }
+
+.time-slot-label {
+    padding: 16px;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + .time-slot-label {
+    background: #1560BD;
+    color: white;
+    border-color: #1560BD;
+}
+
+.submit-btn {
+    width: 100%;
+    background: #1560BD;
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 1.2rem;
+    border-radius: 9999px;
+    margin-top: 30px;
+    cursor: pointer;
+}
